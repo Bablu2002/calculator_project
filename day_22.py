@@ -3,20 +3,21 @@ def calculator():
           
     while True:
     
-        print("\n select an operation grom below(1/2/3/4/5)")
+        print("\n select an operation from below(1/2/3/4/5)")
         print('1.Addition (+)')
         print('2.Subtraction (-)')
         print('3.multiplication (*)')
         print('4.division (/)')
-        print('5.Exit')
+        print('5.power (^)')
+        print('6.Exit')
 
-        choice = input("Enter Your Choice from (1/2/3/4/5):")
+        choice = input("Enter Your Choice from (1/2/3/4/5/6):")
 
-        if choice == "5":
+        if choice == "6":
             print("Thank u for using the calculator app")
             break
             
-        if choice in ['1','2','3','4']:
+        if choice in ['1','2','3','4','5']:
             try:
                 num1 = float(input('Enter the First Number: '))
                 num2 = float(input('Enter the Second Number: '))
@@ -37,6 +38,9 @@ def calculator():
                         print(f"The result of division is: {result}")
                     else:
                         print('Error: cannot divide by Zero')
+                elif choice == '5':
+                    result = num1 ** num2 
+                    print(f"the result of power is: {result}")
 
             except ValueError:
                 print("Error: please enter a valid numeric values")
@@ -44,4 +48,4 @@ def calculator():
         else:
             print('Invalid choice! please select a valid operation')
 
-calculator()
+calculator()    
